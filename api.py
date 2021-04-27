@@ -1,6 +1,4 @@
-from flask import Flask
-import json
-from flask_caching import Cache
+from flask import Flask, jsonify
 
 # implementacion del servicio
 from retrieve_users import retrieveUsers
@@ -19,7 +17,7 @@ def retrieveUserByName(username, page=1):
     try:
         per_page = 10
         response = retrieveUsers(username, per_page, page)
-        return json.load(json.dumps(response))
+        return jsonify(response)
     except Exception as e:
         return "something was wrong :(", e
 
