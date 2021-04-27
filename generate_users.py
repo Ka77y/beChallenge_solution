@@ -1,5 +1,3 @@
-import random
-
 from faker import Faker
 from models import *
 

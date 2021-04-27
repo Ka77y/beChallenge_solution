@@ -19,7 +19,6 @@ def retrieveUserByName(username, page=1):
     try:
         per_page = 10
         response = retrieveUsers(username, per_page, page)
-        print("paseeeeeotaveeee")
         return json.load(json.dumps(response))
     except Exception as e:
         return "something was wrong :(", e
