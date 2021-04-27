@@ -1,7 +1,6 @@
 from flask import Flask
 import json
 from flask_caching import Cache
-import pydash as pyd
 
 # implementacion del servicio
 from retrieve_users import retrieveUsers
